@@ -52,11 +52,6 @@
 </main>
 <footer class="footer"><p><strong>Confidentialité :</strong> <a href="confidentialite.html">Confidentialité</a></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
-<footer>
-  <p>
-    <a href="confidentialite.html">Confidentialité</a>
-  </p>
-</footer>
  fetch('/.netlify/functions/signatures-count')
  .then(r=>{if(!r.ok) throw new Error('Compteur indisponible'); return r.json();})
  .then(d=>{if(typeof d.count!=='number') throw new Error('Réponse invalide'); document.getElementById('signature-count').textContent=d.count.toLocaleString('fr-FR'); document.getElementById('counter-note').textContent='Total des signatures enregistrées sur le formulaire.';})
