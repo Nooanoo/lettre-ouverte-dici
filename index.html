@@ -50,7 +50,7 @@
 </form>
 </section>
 </main>
-<footer class="footer"><p><strong>Confidentialité :</strong> avant ouverture au public, ajoutez ici le nom et les coordonnées du responsable de traitement, la finalité, la base légale, la durée de conservation, les destinataires, les droits des personnes et un moyen de les exercer. Ne publiez pas les adresses e-mail des signataires.</p><p>© <span id="year"></span> — Lettre ouverte</p></footer>
+<footer class="footer"><p><strong>Confidentialité :</strong> <a href="confidentialite.html">Confidentialité</a></p><p>© <span id="year"></span> — Lettre ouverte</p></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
 fetch('/.netlify/functions/signatures-count')
  .then(r=>{if(!r.ok) throw new Error('Compteur indisponible'); return r.json();})
