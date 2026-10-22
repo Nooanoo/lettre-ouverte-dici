@@ -3,23 +3,39 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Signez et partagez cette pétition citoyenne.">
-<title>Lettre ouverte & pétition</title>
+<title>Lettre ouverte</title>
 <style>
 :root{--navy:#12243a;--blue:#2457a6;--red:#d94b43;--paper:#f5f7fa;--ink:#1c2733}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.top{background:var(--navy);color:white;padding:14px 20px}.topin{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:800;letter-spacing:.04em}.pill{font-size:.8rem;border:1px solid #ffffff55;border-radius:999px;padding:4px 10px}.hero{background:linear-gradient(125deg,#10233b,#244e81);color:white;padding:62px 20px 54px}.hero-in{max-width:1050px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:#d9e6fa;font-weight:700}.hero h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.08;max-width:800px;margin:12px 0 18px}.hero p{font-size:1.15rem;max-width:720px;color:#edf3fb}.layout{max-width:1050px;margin:32px auto;padding:0 20px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:26px;align-items:start}.panel{background:white;border:1px solid #e1e6ed;border-radius:18px;padding:clamp(20px,4vw,34px);box-shadow:0 8px 30px #172c4510}.panel h2{margin-top:0;line-height:1.2}.copy p{margin:0 0 1em}.rule{height:4px;width:58px;background:var(--red);border-radius:3px;margin:16px 0 24px}.notice{background:#eef4fb;border-left:4px solid var(--blue);padding:12px 14px;border-radius:7px;font-size:.9rem}.field{margin:16px 0}.field label{display:block;font-weight:650;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #c9d2df;border-radius:9px;padding:12px;font:inherit;background:#fff}.field input:focus,.field textarea:focus{outline:3px solid #2457a633;border-color:var(--blue)}.check{display:flex;gap:10px;align-items:flex-start;margin:16px 0;font-size:.92rem}.check input{margin-top:6px;flex:0 0 auto}.btn{border:0;background:var(--red);color:white;border-radius:10px;padding:14px 18px;font:inherit;font-weight:800;width:100%;cursor:pointer}.btn:hover{filter:brightness(.95)}.small{font-size:.82rem;color:#596777}.status{margin-top:14px;font-weight:650}.footer{max-width:1050px;margin:0 auto;padding:0 20px 36px;color:#596777;font-size:.85rem}.footer a{color:inherit}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}@media(max-width:760px){.layout{grid-template-columns:1fr;margin-top:20px}.hero{padding-top:44px}.topin{align-items:flex-start;flex-direction:column;gap:6px}}
+
+.banner-photo{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;background:#fff;border-bottom:1px solid #e1e6ed}
+.counter-wrap{max-width:1050px;margin:24px auto 0;padding:0 20px}
+.counter{background:#fff;border:1px solid #e1e6ed;border-radius:16px;padding:18px 22px;display:flex;align-items:center;justify-content:center;gap:14px;text-align:center;box-shadow:0 8px 30px #172c4510}
+.counter-number{font-size:clamp(2rem,5vw,3rem);font-weight:850;line-height:1;color:var(--red);font-variant-numeric:tabular-nums}
+.counter-label{font-weight:750;color:var(--navy)}
+.counter-note{font-size:.8rem;color:#596777}
+@media(max-width:760px){.banner-photo{max-height:none}.counter{flex-direction:column;gap:7px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="topin"><div class="brand">LETTRE OUVERTE · PÉTITION</div><span class="pill">Initiative citoyenne</span></div></header>
-<section class="hero"><div class="hero-in"><div class="eyebrow">Une mobilisation collective</div><h1>Faisons entendre notre voix.</h1><p>Découvrez cette lettre ouverte, prenez connaissance de ses objectifs et, si vous y adhérez, ajoutez votre signature.</p></div></section>
+<header class="top"><div class="topin"><div class="brand">LETTRE OUVERTE</div><span class="pill">Initiative citoyenne</span></div></header>
+<img class="banner-photo" src="audiences-ici.png" alt="Graphique sur l’évolution des audiences de France Bleu" />
+<section class="hero"><div class="hero-in"><div class="eyebrow">Une mobilisation collective</div><h1>Ici, STOPPONS LE DECLIN<p>Découvrez cette lettre ouverte, prenez connaissance de ses objectifs et, si vous y adhérez, ajoutez votre signature.</p></div></section>
+<section class="counter-wrap" aria-label="Compteur de signatures">
+<div class="counter"><div class="counter-number" id="signature-count" aria-live="polite">—</div>
+<div><div class="counter-label">Signatures enregistrées</div><div class="counter-note" id="counter-note">Compteur en attente de connexion aux données Netlify.</div></div></div>
+</section>
 <main class="layout">
 <section class="panel copy"><h2>La lettre ouverte</h2><div class="rule"></div>
-<p><strong>Objet : appel à mobilisation citoyenne</strong></p>
-<p>Nous souhaitons attirer l’attention sur une question qui concerne notre territoire et l’intérêt collectif. Par cette lettre ouverte, nous appelons les responsables concernés à écouter les habitants, à ouvrir le dialogue et à examiner les propositions portées par cette démarche.</p>
-<p>Notre initiative se veut respectueuse, constructive et transparente. Elle vise à rassembler celles et ceux qui souhaitent faire avancer le débat et obtenir une réponse claire.</p>
-<p>En signant cette pétition, vous manifestez votre soutien à cette démarche. Le texte ci-dessus est un modèle : personnalisez-le avant publication pour préciser le sujet, les destinataires et les demandes concrètes.</p>
-<div class="notice"><strong>À personnaliser avant diffusion :</strong> remplacez le titre et le texte par la version définitive de votre pétition. Ajoutez également une notice de confidentialité adaptée à votre responsable de traitement.</div>
+<p><strong>Objet : Stoppons le déclin !</strong></p>
+<p>En 2022, j’ai eu l’honneur de présenter ma candidature à la présidence de Radio France, au terme d’une longue carrière au sein de cette maison à laquelle je dois beaucoup et à laquelle je suis très attaché. Auditionné à Paris par l’Arcom, ma candidature a été considéré comme « utile » par l’autorité de régulation.</p>
+<p>Devant les membres du collège, j’avais alors exprimé mes inquiétudes quant à la situation de France Bleu, dont l’audience stagnait autour de 5,5 %. Depuis, malgré une tribune publiée il y a plus d’un an pour alerter une nouvelle fois sur cette situation, force est de constater que les mesures engagées, pas plus que les questionnaires adressés aux équipes, ne semblent enrayer l’érosion continue de l’audience. Un réseau qui a atteint près de 8 % il y a quelques années pourrait désormais, selon certaines estimations, passer sous la barre des 3,5 %.</p>
+<p>Avec mon équipe, je défends depuis longtemps une conviction forte, nourrie par mon expérience et par les témoignages de professionnels qui expriment aujourd’hui leur lassitude, parfois dans une forme de démission silencieuse : l’avenir des radios locales passe par moins de verticalité, davantage d’autonomie et une véritable confiance accordée aux équipes sur le terrain. C’est cet esprit de responsabilité et de proximité que j’ai connu au début de ma carrière et que je souhaite voir renaître.</p>
+<p>Si vous partagez cette conviction et estimez qu’une autre voie est possible, je vous invite à nous rejoindre en signant cette lettre ouverte collective.</p>
+<p>Ensemble, nous pouvons encore contribuer à enrayer le déclin, à redonner un nouvel élan aux 44 radios locales de Radio France et à leur rendre la place qu’elles méritent dans le paysage radiophonique français.</p>
+<p><strong>Florent CHATAIN</strong></p>
+<div class="notice"><strong>Ils soutiennent la lettre ouverte :</strong> M. ...... ; Madame ..... .</div>
 </section>
-<section class="panel"><h2>Signer la pétition</h2><p class="small">Les champs marqués d’un astérisque sont obligatoires.</p>
+<section class="panel"><h2>Signer la Lettre ouverte</h2><p class="small">Les champs marqués d’un astérisque sont obligatoires.</p>
 <form name="signatures-petition" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci">
 <input type="hidden" name="form-name" value="signatures-petition">
 <p class="trap"><label>Ne pas remplir : <input name="bot-field"></label></p>
@@ -28,12 +44,16 @@
 <div class="field"><label for="email">Adresse e-mail *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"><div class="small">Elle ne doit pas être affichée publiquement.</div></div>
 <div class="field"><label for="ville">Ville (facultatif)</label><input id="ville" name="ville" autocomplete="address-level2" maxlength="100"></div>
 <div class="field"><label for="commentaire">Message (facultatif)</label><textarea id="commentaire" name="commentaire" rows="3" maxlength="1000"></textarea></div>
-<label class="check"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte que les informations saisies soient utilisées pour gérer cette pétition. J’ai pris connaissance de la notice de confidentialité publiée par l’organisateur. *</span></label>
+<label class="check"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte que les informations saisies soient utilisées pour gérer cette lettre ouverte. J’ai pris connaissance de la notice de confidentialité publiée par l’organisateur. *</span></label>
 <button class="btn" type="submit">Envoyer ma signature</button>
-<p class="small">La signature ne sera prise en compte que si le formulaire est correctement transmis et que l’organisateur a activé la collecte sur Netlify.</p>
+<p class="small">La signature ne sera prise en compte que si le formulaire est correctement remplis</p>
 </form>
 </section>
 </main>
-<footer class="footer"><p><strong>Confidentialité :</strong> avant ouverture au public, ajoutez ici le nom et les coordonnées du responsable de traitement, la finalité, la base légale, la durée de conservation, les destinataires, les droits des personnes et un moyen de les exercer. Ne publiez pas les adresses e-mail des signataires.</p><p>© <span id="year"></span> — Lettre ouverte & pétition</p></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<footer class="footer"><p><strong>Confidentialité :</strong> avant ouverture au public, ajoutez ici le nom et les coordonnées du responsable de traitement, la finalité, la base légale, la durée de conservation, les destinataires, les droits des personnes et un moyen de les exercer. Ne publiez pas les adresses e-mail des signataires.</p><p>© <span id="year"></span> — Lettre ouverte</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();
+fetch('/.netlify/functions/signatures-count')
+ .then(r=>{if(!r.ok) throw new Error('Compteur indisponible'); return r.json();})
+ .then(d=>{if(typeof d.count!=='number') throw new Error('Réponse invalide'); document.getElementById('signature-count').textContent=d.count.toLocaleString('fr-FR'); document.getElementById('counter-note').textContent='Total des signatures enregistrées sur le formulaire.';})
+ .catch(()=>{document.getElementById('signature-count').textContent='—'; document.getElementById('counter-note').textContent='Compteur non connecté : les signatures ne sont pas comptées publiquement pour le moment.';});</script>
 </body></html>
