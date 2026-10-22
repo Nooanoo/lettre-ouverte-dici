@@ -75,7 +75,7 @@
 </form>
 </section>
 </main>
-<footer class="footer"><p><strong>Confidentialité :</strong> <a href="confidentialite.html"><strong>Confidentialit</strong></a></p><p>© <span id="year"></span> — Lettre ouverte</p></footer>
+<footer class="footer"><p><a href="confidentialite.html"><strong>Confidentialité</strong></a></p><p>© <span id="year"></span> — Lettre ouverte</p></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
 fetch('/.netlify/functions/signatures-count')
  .then(r=>{if(!r.ok) throw new Error('Compteur indisponible'); return r.json();})
