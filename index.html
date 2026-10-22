@@ -46,11 +46,11 @@
 <div class="field"><label for="commentaire">Message (facultatif)</label><textarea id="commentaire" name="commentaire" rows="3" maxlength="1000"></textarea></div>
 <label class="check"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte que les informations saisies soient utilisées pour gérer cette lettre ouverte. J’ai pris connaissance de la notice de confidentialité publiée par l’organisateur. *</span></label>
 <button class="btn" type="submit">Envoyer ma signature</button>
-<p class="small">La signature ne sera prise en compte que si le formulaire est correctement remplis</p>
+<p class="small">La signature ne sera prise en compte que si le formulaire est correctement rempli</p>
 </form>
 </section>
 </main>
-<footer class="footer"><p><strong>Confidentialité :</strong> <a href="confidentialite.html">Confidentialité</a></footer>
+<footer class="footer"><p></strong> <a href="confidentialite.html">Confidentialité</a></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
  fetch('/.netlify/functions/signatures-count')
  .then(r=>{if(!r.ok) throw new Error('Compteur indisponible'); return r.json();})
